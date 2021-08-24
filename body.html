@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.js" type="text/javascript"></script>
+	<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery-2.1.3.js" type="text/javascript"></script>
+	<script src="js/waypoints.min.js" type="text/javascript"></script>   
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>   
+	<script src="js/jquery.counterup.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+</head>
+	
+<style>
+@font-face{
+	font-family: Proxima Nova;
+	src:url("fonts/proxima-nova-black.otf");
+	}
+
+@font-face{
+	font-family: Montserrat;
+	src:url("fonts/Montserrat-Bold.otf");
+	}
+	
+@font-face{
+	font-family: Montserrat-Light;
+	src:url("fonts/Montserrat-Light.otf");
+	}
+
+@font-face{
+	font-family: Montserrat-Italic;
+	src:url("fonts/Montserrat-Italic.otf");
+	}
+
+@font-face{
+	font-family: Montserrat-SemiBold;
+	src:url("fonts/Montserrat-SemiBold.otf");
+	}
+
+html{ 
+		scroll-behavior: smooth;
+		margin: 0;
+		padding: 0;
+	}
+
+	.faixa1, .faixa2, .faixa3 {background-color: green;}
+
+    .faixa1{
+        width:100%;
+        height: 600px;
+	}
+    .faixa2 {
+        width:100%;
+        height: 900px;
+    }
+    .faixa3 {
+        width:100%;
+        height: 600px;
+    }
+    .navbar {
+        z-index: 1; 
+	    position: sticky;
+	    top: 0; 
+    }
+    .pal {
+        font-family: "Calibri";
+		font-size: 15px;
+		color: white
+    }
+
+	.space {margin-left: 10px;}
+	
+	.img1, .img2, .img3 {
+		height: 310px;
+		width: 450px;
+	}
+	.paragaph {
+		max-width: 97%;
+		font-size: 15px;
+		color: white;
+		font-family: "Montserrat-Light";
+		margin: 15px;
+		line-height: 17px;
+		word-spacing: 2pt;
+		cursor: default;
+	}
+
+    .bg {
+        background: green;
+        height: 70px;
+        box-shadow: 0 4px 0 darkgreen;
+	    -webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -khtml-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+    }
+    
+	.menu-fixo {
+		position: fixed;
+		top: 0;
+		background: green;
+    z-index: 99;
+    width: 100%;
+		transition: all .5s;
+    
+	}
+  body {
+   		background: url(imagens/a.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	    background-attachment: fixed;
+	    margin: 0 auto;
+  }
+	.menu-fixo a {
+		padding: 20px 20px !important;
+		transition: all .5s;
+	}
+  #navbar-exemplo2 {
+    display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: green;
+		width: 100%;
+		opacity : 0;
+		transition: all .5s;
+  }
+  #nav-exemplo2 ul {
+		opacity: 1;
+		display: flex;
+		padding: 0 30px;
+		list-style: none;
+	}
+	#nav-exemplo2 ul li {transition: all .5s;}
+
+	#nav-exemplo2 ul li.active {background: black;}
+
+	#nav-exemplo2 ul li:hover {
+		background: black;
+		transition: all .5s;
+	}
+	#nav-exemplo2 ul li a {
+		display: inline-block;
+		color: black;
+		text-decoration: none;
+		padding: 30px 20px;
+		transition: all .5s;
+	}
+	.header{
+		width: 100%;
+		height: 150px;
+		background: url(imagens/a.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	    background-attachment: fixed;
+	    margin: 0 auto;
+  }
+  .impi {
+	  font-family: "Montserrat";
+	  font-size: 35px;  
+	  line-height: 100px;
+  }
+  .imagem01 {
+		width: 100%;
+		height: 550px;
+		background: url(imagens/a.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	    background-attachment: fixed;
+	    margin: 0 auto;
+	}
+	#headtxt {
+		text-align: center;
+		color: white;
+		font-family: "Proxima Nova" ;
+		letter-spacing: 3pt;
+  		font-size: 45px;
+  		display:inline;
+   	 	line-height: 160px;
+		cursor: default;
+		-webkit-touch-callout: none;
+	 	-webkit-user-select: none;
+	 	-khtml-user-select: none;
+	 	-moz-user-select: none;
+	 	-ms-user-select: none;
+	  	user-select: none;
+		text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+	  	1px 5px 0 grey, 1px 6px 0 grey,
+		5px 4px 15px black;
+	  
+  }
+  .rodape {
+		width: 100%;
+		height: 55px;
+		background-color: black;
+	}
+
+	.rodape .tdmk {
+		margin: 0 auto;
+		line-height: 50px;
+		margin: 0 auto;
+		color: white;
+		font-family: Montserrat, sans-serif;
+		font-size: 13px;
+		letter-spacing: 0.6pt;
+		word-spacing: 1.4pt;
+	}
+  .abouttxt {
+		font-size: 15px;
+    	color: white;
+		font-family: "Montserrat";
+		margin: 0 auto;
+		word-spacing: 2pt;
+		cursor: default;
+		-webkit-touch-callout: none;
+	 	-webkit-user-select: none;
+	 	-khtml-user-select: none;
+	 	-moz-user-select: none;
+	 	-ms-user-select: none;
+    	user-select: none;
+    	max-width: 95%;
+  }
+  .itbl {
+	  font-family: "Montserrat";
+	  line-height: 100px;
+	  font-size: 30px;
+  }
+	a:link {text-decoration:none;}
+	a:link:hover {text-decoration:none;}
+	 
+  [data-anime] {
+	  opacity: 0;
+	  transition: .3s;
+	}
+
+	[data-anime="left"] {
+	  transform: translate3d(-50px, 0, 0);
+	}
+
+	[data-anime="right"] {
+ 	 transform: translate3d(50px, 0, 0);
+	}
+
+	[data-anime="top"] {
+	  transform: translate3d(0, -50px, 0);
+	}
+
+	[data-anime].animate {
+	  opacity: 1;
+ 	 transform: translate3d(0px, 0px, 0px);
+	}
+
+	h2 {display: inline;}
+	.pass {
+		position: relative;
+		width: 100%;
+		height: 25px;
+        margin: 0 auto;
+        display: table;
+        clear: both;
+        background: white;
+	}
+	.vid {
+		position: relative;
+		width: 100%;
+		height: 25px;
+        margin: 0 auto;
+        display: table;
+        clear: both;
+	}
+	.criadores {
+		position: relative;
+		width: 100%;
+		height: 325px;
+        margin: 0 auto;
+        display: table;
+        clear: both;
+	}
+	.criadores .a {
+		position: relative;
+		width: calc(150px);
+		height: calc(150px);
+		float: center;
+		display: inline;
+		margin: 74px;
+		box-sizing: border-box;
+		overflow: hidden;
+    }
+	.imgcr {
+		width: 100px;
+		height: 100px;
+		box-shadow: 0 0 6px green, 1px 1px 10px black;
+	}
+	.imagem03{
+		width: 100%;
+		height: 450px;
+		background: url(imagens/d.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+
+	}
+	.imagem02{
+		width: 100%;
+		height: 500px;
+		background: url(imagens/b.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.pass .a {
+		position: relative;
+		width: calc(350px - 50px);
+		height: calc(150px);
+		float: left;
+		margin: 74px;
+		box-sizing: border-box;
+		overflow: hidden;
+    }
+	.vid .b {
+		position: relative;
+		width: calc(250px);
+		height: calc(200px);
+		float: left;
+		margin: 74px;
+		box-sizing: border-box;
+		overflow: hidden;
+    }
+    .pass .a .ount-number, .ount-number1, .ount-number2 {
+        font-family: "Proxima Nova";
+        font-size: 50px;
+    }
+    .pass .a .acomp {
+        font-family: "Montserrat";
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 20px;
+        font-family: "Montserrat";
+    }
+    .pass .a .top {
+        line-height: 20px;
+    }
+    .pass .a .butt {
+        line-height: 40px;
+	}
+	.imagem03 .texto1 {
+		margin: 0 auto;
+		font-family: "Montserrat-SemiBold";
+		font-size: 40px;
+		letter-spacing: 1.6pt;
+		word-spacing: 0.8pt;
+		cursor: default;
+		-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -khtml-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	}
+
+	.imagem03 .texto2 {
+		margin: 0 auto;
+		font-family: "Montserrat-Italic";
+		font-size: 23px;
+		letter-spacing: 0.4pt;
+		word-spacing: 0.2pt;
+		cursor: default;
+		-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -khtml-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	}
+	.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url("loading.gif") 50% 50% no-repeat white;
+	-webkit-animation:jump 2s ease 0s infinite normal;
+-moz-animation:jump 1s ease 0s infinite normal;
+-ms-animation:jump 1s ease 0s infinite normal;
+animation:jump 2s ease 0s infinite normal;
+}
+
+
+@keyframes jump{
+0%{ transform:translateY(0); }
+20%{ transform:translateY(0); }
+50%{ transform:translateY(0); }
+100%{ transform:translateY(-100%);}
+}
+
+.sep {
+	width: 100%;
+	height: 70px;
+	background: darkgreen;
+}
+</style>
+	
+<script>
+		  jQuery(window).load(function () {
+      $(".loader").delay(1400).fadeOut("fast"); 
+    $("#tudo_page").toggle("fast");
+});
+			$(function(){   
+			  var nav = $('#navbar-exemplo2');   
+			  $(window).scroll(function () { 
+				if ($(this).scrollTop() > 150) { 
+				  nav.addClass("menu-fixo");
+				  $('body').css('padding-top', 70);
+				  $('#navbar-exemplo2').css('opacity', 1);
+				} else { 
+				  nav.removeClass("menu-fixo"); 
+				  $('body').css('padding-top', 0);
+		  
+				} 
+			  });  
+			});
+			
+	   $(document).ready(function($) {
+			  $('.ount-number').counterUp({
+				  delay: 20,
+				  time: 1000
+			  });
+	   });
+	  
+	   $(document).ready(function($) {
+			  $('.ount-number1').counterUp({
+				  delay: 50,
+				  time: 1500
+			  });
+	   });
+	   
+	   $(document).ready(function($) {
+			  $('.ount-number2').counterUp({
+				  delay: 50,
+				  time: 2000
+			  });
+	   });
+	   
+</script>
+<body>
+		<div id="loader" class="loader"></div>
+		<div style="display:none" id="tudo_page"></div>
+	<header>
+	<div class="header" id=top>
+    	<center>
+      	<h1 id="headtxt">T.I. VERDE</h1>
+		</center>
+	</header>
+	</div>
+        <nav id="navbar-exemplo2" class="navbar navbar-expand-lg navbar-light bg">
+            <a class="navbar-brand" href="#top"><img src="icone.png" width="75" height="70" alt="" href="#q">
+            </a>
+            <ul class="navbar-nav space">
+                <li class="nav-item">
+                    <a class="nav-link pal" href="#q">O QUE É ?</a>
+            	</li>
+                <li class="nav-item">
+                    <a class="nav-link pal" href="#h">HISTÓRIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pal" href="#p">PRÁTICAS</a>
+                </li>
+                <li class="nav-item">
+                	<a class="nav-link pal"  href="#g">GALERIA</a>
+                </li>
+                <li class="nav-item">
+                	<a class="nav-link pal" href="#x">SOBRE</a>
+				</li>
+            </ul>
+        </nav>
+    
+		<div class="imagem01"></div>
+
+		<div id="q">
+		<div class="sep"></div>
+		<div class="faixa1 oq">
+			<center>
+				<img src="imagens/oq.png">
+			</center>
+				<img src="imagens/imagem03.jpg" class="img2" align="left">
+				<p class="paragaph txt1" align="center">“Green IT" ou "Tecnologia da Informação Verde" é um conjunto de todas as atividades e soluções providas por recursos de computação para tornar o uso da tecnologia mais sustentável e menos prejudicial, ela propõe modos de compatibilizar o uso de recursos naturais de forma adequada às políticas sustentáveis existentes dentro das organizações. Alguns exemplos são o uso de recursos tecnológicos que consumam menos energia, o uso de matéria prima e substâncias menos tóxicas em seus processos produtivos e o descarte responsável de seus produtos através da reciclagem e da reutilização de materiais. A TI Verde engloba, entre outros, o cumprimento da legislação ambiental e os diagnósticos dos aspectos e impactos ambientais de atividades relacionadas à área da Tecnologia da Informação, seguindo e desenvolvendo procedimentos e planos de ação com objetivos de eliminação ou diminuição da agressão ambiental. Cada vez mais utilizado no século XXI, o TI verde é um conjunto de ações que torna o processo de produção de equipamentos menos prejudicial ao meio ambiente. O objetivo é produzir produtos que consomem menos energia, evitar a utilização de metais pesados e o uso de componentes químicos e tóxicos, além de aumentar a quantidade de materiais recicláveis na fabricação dos produtos.
+				A TI Verde (ou Green IT) engloba também o cumprimento da legislação ambiental e diagnósticos dos impactos ambientais de atividades relacionadas a área.</p>
+			<br><br><br><br><br><br><br>
+		</div>
+		</div>
+
+		<div id="h">
+		<div class="faixa1 hist">
+		<div class="sep"></div>
+		<center>
+			<img src="imagens/hist.png">
+		</center>
+			<img src="imagens/imagem04.png" class="img2" align="right">
+			<p class="paragaph" align="center">Após a Revolução Tecnológica a sociedade passou a ter um comportamento marcado pelo consumismo desenfreado de bens e recursos, de desperdícios e da ausência de cuidados no descarte de resíduos, tudo isso passou a chamar atenção de parte da população que começou a pensar nas consequências disso no meio ambiente. Esta mesma preocupação foi sentida pelos mais diversos setores da economia, o que levou governantes, empresas e sociedade civil a buscar medidas para contenção de impactos ambientais e preservação do planeta. Este movimento de massas preocupadas em compatibilizar o crescimento econômico com a manutenção do meio ambiente saudável toma força nos anos 90, quando se estabelece o conceito de sustentabilidade, ficando claro que para a conservação do planeta ser efetiva seria necessário rever os modos de produção de forma a torná-los menos degradantes ao meio ambiente. Diante deste alerta e da nova mentalidade surge o TI Verde, que foi criado por empresas de tecnologia com a finalidade de aliar os recursos disponíveis às políticas de sustentabilidade e economia dentro das organizações.</p>
+		<br><br><br><br><br><br><br>
+		</div>
+		</div>
+
+	<div id="p">
+	<div class="faixa1 prat">
+	<div class="sep"></div>
+		<center>
+			<img src="imagens/prat.png">
+		</center>
+			<img src="imagens/imagem3.png" class="img3" align="left">
+			<p class="paragaph" align="center">Faz parte do T.I. Verde as medidas de contenção de gastos elétricos excessivos, como o uso de monitoramento automático de energia nos equipamentos e o desligamento dos mesmos, a utilização de lâmpadas fluorescentes e a otimização da temperatura das salas. As empresas podem fazer medidas mais radicais como a criação de uma nova infraestrutura na rede elétrica visando à sua maior eficiência e sistemas computacionais de menor consumo elétrico (incluindo novas políticas internas e medidas de controle de seus descartes) ou até a implementação estrutural de um parque tecnológico visando a maximização do desempenho com o mínimo gasto elétrico (com projetos de sistemas de refrigeração, iluminação e disposição de equipamentos no local)</p>
+		<br><br><br><br><br><br><br>
+	</div>
+	</div>
+	<div class="sep"></div>
+
+	<div class="pass">
+		<center>
+			<font class="itbl">As empresas que adotaram o T.I. Verde</font>
+		</center>
+			<div class="a">
+				<h3 class="top">Tiveram um consumo energético</h3>
+				<h2 class="ount-number">40</h2><h2 class="acomp"> %</h2><img src="icones/planet-earth.png" width="100px" height="100px" align="right" style="margin-top: -23px">
+				<h3 class="butt">mais eficiente</h3>
+			</div>
+			<div class="a">
+				<h3 class="top">Obtiveram uma redução de</h3>
+				<h2 class="ount-number1">500</h2><h2 class="acomp"> mil reais</h2><img src="icones/money-bag.png" width="100px" height="100px" align="right">
+				<h3 class="butt">em custos</h3>
+			</div>
+			<div class="a">
+				<h3 class="top">Deixaram de cortar</h3>
+				<h2 class="ount-number2">500</h2><h2 class="acomp"> Árvores</h2><img src="icones/trees.png" width="100px" height="100px" align="right">
+				<h3 class="butt">por ano</h3>
+			</div>
+		</div>
+
+		<div class="imagem02"></div>
+
+		<div id="g">
+		<div class="sep"></div>
+		<div class="faixa2">
+			<center>
+				<img src="imagens/galeria.png">
+			</center>
+		</div>
+		</div>
+
+		<div class="imagem03">
+			<center>
+			<hgroup>
+				<br><br><br><br><br><br><br>
+				<font class="texto1" color="white">UMA NOVA FORMA DE SE PENSAR</font><br>
+				<font class="texto2" color="white">ISSO É O T.I. VERDE</font>
+			</hgroup>
+			</center>
+		</div>
+
+		<div id="x">
+		<div class="sep"></div>
+		<div class="faixa3">
+			<center>
+				<img src="imagens/sobre.png">
+				<p class="abouttxt" align="justify">Esse site foi feito para um trabalho semestral na <b>Escola e Faculdade Fortec </b>com o objetivo de usar os conhecimentos adquiridos no curso e também promover ações a favor do Meio Ambiente. O tema principal tem a função de conscientizar todos os visitantes sobre a necessidade que temos de cuidar do meio ambiente e o nosso tema, o T.I. Verde, tem o objetivo de mostrar essa pratica importante e simples que nós da área de T.I. deveríamos zelar.
+				Todos os temas, seja "Sustentabilidade", "T.I. Verde", entre outros, são assuntos importantes e práticas relacionados a eles devem estar nos nossos hábitos.</p>
+			<br><br>
+			<img src="imagens/criadores.png">
+			<br><br><br>
+			</center>
+        	
+    	<div class="rodape">
+        	<center>
+       			<font class="tdmk">Copyright 2019 - Todos os direitos reservados ©</font>
+			</center>
+		</div>
+    </body>
+</html>
+	
